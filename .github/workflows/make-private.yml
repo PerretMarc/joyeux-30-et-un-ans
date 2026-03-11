@@ -1,0 +1,19 @@
+name: Make repo private
+
+on:
+  schedule:
+    # March 14, 2026 at 00:00 UTC
+    - cron: '0 0 14 3 *'
+
+permissions:
+  administration: write
+
+jobs:
+  make-private:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set repo to private
+        run: |
+          gh repo edit ${{ github.repository }} --visibility private --accept-visibility-change-consequences
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
