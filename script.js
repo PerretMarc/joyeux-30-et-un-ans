@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCountdown();
     initHeroHearts();
     initHeroConfetti();
+    initSparkleCanvas();
     initFooterHearts();
     initGallery();
     initLightbox();
@@ -57,7 +58,7 @@ function initCountdown() {
         }
 
         // Still counting down — lock the page
-        if (!unlocked) {
+        if (!document.body.classList.contains("locked")) {
             document.body.classList.add("locked");
             lockedMessage.style.display = "";
         }
@@ -75,6 +76,90 @@ function initCountdown() {
 
     update();
     setInterval(update, 1000);
+}
+
+// ============================================================
+// Sparkle Canvas — heart trail on mouse move (GPU-friendly)
+// ============================================================
+function initSparkleCanvas() {
+    const canvas = document.getElementById("sparkleCanvas");
+    const hero = document.getElementById("hero");
+    const ctx = canvas.getContext("2d");
+    const particles = [];
+    const colors = ["#c47a82", "#c24c6a", "#d47856", "#a6797a", "#edcab8"];
+    let animating = false;
+
+    function resize() {
+        canvas.width = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    function drawHeart(cx, cy, size, color, alpha) {
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy + size * 0.3);
+        ctx.bezierCurveTo(cx, cy, cx - size, cy, cx - size, cy + size * 0.3);
+        ctx.bezierCurveTo(cx - size, cy + size * 0.75, cx, cy + size, cx, cy + size * 1.2);
+        ctx.bezierCurveTo(cx, cy + size, cx + size, cy + size * 0.75, cx + size, cy + size * 0.3);
+        ctx.bezierCurveTo(cx + size, cy, cx, cy, cx, cy + size * 0.3);
+        ctx.fill();
+        ctx.restore();
+    }
+
+    function spawn(x, y) {
+        for (let i = 0; i < 2; i++) {
+            particles.push({
+                x: x + (Math.random() - 0.5) * 16,
+                y: y + (Math.random() - 0.5) * 16,
+                vx: (Math.random() - 0.5) * 1.5,
+                vy: -1 - Math.random() * 2,
+                size: 4 + Math.random() * 5,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                life: 1,
+                decay: 0.015 + Math.random() * 0.01,
+            });
+        }
+        if (!animating) {
+            animating = true;
+            requestAnimationFrame(loop);
+        }
+    }
+
+    function loop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            p.life -= p.decay;
+            if (p.life <= 0) {
+                particles.splice(i, 1);
+                continue;
+            }
+            drawHeart(p.x, p.y, p.size, p.color, p.life);
+        }
+        if (particles.length > 0) {
+            requestAnimationFrame(loop);
+        } else {
+            animating = false;
+        }
+    }
+
+    let lastTime = 0;
+    function onMove(cx, cy) {
+        const now = performance.now();
+        if (now - lastTime < 40) return;
+        lastTime = now;
+        const rect = hero.getBoundingClientRect();
+        spawn(cx - rect.left, cy - rect.top);
+    }
+
+    hero.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
+    hero.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
 }
 
 // ============================================================

@@ -6,244 +6,237 @@
     <title>Joyeux Anniversaire, Aurélia !</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&family=Nunito:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ============ SECTION 1: HERO ============ -->
-    <section id="hero" class="hero">
-        <div class="hearts-container" id="heartsContainer"></div>
-        <div class="confetti-container" id="confettiContainer"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Pour la plus merveilleuse des personnes</p>
-            <h1 class="hero-title">Joyeux Anniversaire,<br><span class="name">Aurélia</span> !</h1>
-            <p class="hero-message">Cette page est pour toi, avec tout mon amour</p>
-        </div>
-        <a href="#countdown" class="scroll-indicator" aria-label="Défiler vers le bas">
-            <span class="scroll-arrow"></span>
-        </a>
-    </section>
+<!-- ============ SECTION 1: HERO ============ -->
+<section id="hero" class="hero">
+    <canvas class="sparkle-canvas" id="sparkleCanvas"></canvas>
+    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="hero-content">
+        <p class="hero-subtitle">Pour la plus merveilleuse des personnes</p>
+        <h1 class="hero-title">Joyeux Anniversaire<br><span class="name">ma Femme</span> ❤️</h1>
 
-    <!-- ============ SECTION 2: COUNTDOWN ============ -->
-    <section id="countdown" class="countdown-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Le Compte à Rebours</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Chaque seconde qui passe nous rapproche de ton jour spécial</p>
-            <div class="countdown-wrapper" id="countdownWrapper" data-aos="zoom-in" data-aos-delay="200">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="days">00</span>
-                    <span class="countdown-label">Jours</span>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">00</span>
-                    <span class="countdown-label">Heures</span>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">00</span>
-                    <span class="countdown-label">Secondes</span>
-                </div>
-            </div>
-            <div class="celebration-message" id="celebrationMessage" style="display: none;">
-                <h3>C'est aujourd'hui !</h3>
-                <p>Joyeux Anniversaire, Aurélia !</p>
-            </div>
-            <div class="locked-message" id="lockedMessage" style="display: none;">
-                <div class="locked-icon">&#x1F512;</div>
-                <p>Patience, mon amour... La suite se dévoilera le jour J !</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ SECTION 3: TIMELINE ============ -->
-    <section id="timeline" class="timeline-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Notre Histoire</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Les moments qui ont construit notre belle histoire</p>
-            <div class="timeline">
-                <div class="timeline-line"></div>
-
-                <div class="timeline-entry" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">15 Janvier 2023</span>
-                        <h3 class="timeline-title">Notre Première Rencontre</h3>
-                        <p class="timeline-text">Ce jour-là, tout a changé. Un regard, un sourire, et mon cœur a su que c'était toi.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry timeline-right" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">14 Février 2023</span>
-                        <h3 class="timeline-title">Notre Premier Rendez-vous</h3>
-                        <p class="timeline-text">Un café, des heures de conversation, et la certitude que je voulais te revoir encore et encore.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">20 Mars 2023</span>
-                        <h3 class="timeline-title">Officellement Ensemble</h3>
-                        <p class="timeline-text">Le plus beau « oui » de ma vie. Ce jour-là, nous avons commencé à écrire notre histoire à deux.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry timeline-right" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">Juillet 2023</span>
-                        <h3 class="timeline-title">Notre Premier Voyage</h3>
-                        <p class="timeline-text">Des paysages magnifiques, des fous rires, des souvenirs gravés pour toujours dans nos cœurs.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">Décembre 2023</span>
-                        <h3 class="timeline-title">Notre Premier Noël</h3>
-                        <p class="timeline-text">Les lumières, la magie de Noël, et toi — le plus beau cadeau que la vie m'ait offert.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry timeline-right" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">Aujourd'hui</span>
-                        <h3 class="timeline-title">Et Ce N'est Que le Début...</h3>
-                        <p class="timeline-text">Chaque jour à tes côtés est une aventure merveilleuse. J'ai hâte de vivre la suite avec toi.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ SECTION 4: PHOTO GALLERY ============ -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Nos Plus Beaux Moments</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Un aperçu de notre bonheur capturé en images</p>
-            <div class="gallery-grid">
-                <div class="polaroid" data-aos="fade-up" data-aos-delay="0">
-                    <div class="polaroid-inner" data-src="images/gallery-1.jpg">
-                        <div class="polaroid-placeholder">Photo 1</div>
-                    </div>
-                    <p class="polaroid-caption">Notre premier selfie ensemble</p>
-                </div>
-                <div class="polaroid" data-aos="fade-up" data-aos-delay="100">
-                    <div class="polaroid-inner" data-src="images/gallery-2.jpg">
-                        <div class="polaroid-placeholder">Photo 2</div>
-                    </div>
-                    <p class="polaroid-caption">Ce coucher de soleil magique</p>
-                </div>
-                <div class="polaroid" data-aos="fade-up" data-aos-delay="200">
-                    <div class="polaroid-inner" data-src="images/gallery-3.jpg">
-                        <div class="polaroid-placeholder">Photo 3</div>
-                    </div>
-                    <p class="polaroid-caption">Fous rires garantis</p>
-                </div>
-                <div class="polaroid" data-aos="fade-up" data-aos-delay="0">
-                    <div class="polaroid-inner" data-src="images/gallery-4.jpg">
-                        <div class="polaroid-placeholder">Photo 4</div>
-                    </div>
-                    <p class="polaroid-caption">Notre endroit préféré</p>
-                </div>
-                <div class="polaroid" data-aos="fade-up" data-aos-delay="100">
-                    <div class="polaroid-inner" data-src="images/gallery-5.jpg">
-                        <div class="polaroid-placeholder">Photo 5</div>
-                    </div>
-                    <p class="polaroid-caption">Un moment de pur bonheur</p>
-                </div>
-                <div class="polaroid" data-aos="fade-up" data-aos-delay="200">
-                    <div class="polaroid-inner" data-src="images/gallery-6.jpg">
-                        <div class="polaroid-placeholder">Photo 6</div>
-                    </div>
-                    <p class="polaroid-caption">Toujours plus beaux ensemble</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ SECTION 5: MINI-GAME + LOVE LETTER ============ -->
-    <section id="letter" class="letter-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Ma Lettre pour Toi</h2>
-
-            <!-- Heart Catch Game — gates access to the letter -->
-            <div class="game-wrapper" id="gameWrapper" data-aos="fade-up" data-aos-delay="100">
-                <p class="game-intro">Une surprise t'attend... mais il faut d'abord attraper des coeurs !</p>
-                <div class="game-area" id="gameArea">
-                    <div class="game-score">
-                        <span id="gameScore">0</span> / <span id="gameTarget">10</span>
-                    </div>
-                    <div class="game-progress-bar">
-                        <div class="game-progress-fill" id="gameProgressFill"></div>
-                    </div>
-                    <div class="game-field" id="gameField"></div>
-                    <button class="game-start-btn" id="gameStartBtn">Jouer</button>
-                </div>
-            </div>
-
-            <!-- Letter revealed after game is won -->
-            <div class="letter-wrapper" id="letterWrapper" style="display: none;">
-                <div class="letter">
-                    <div class="letter-stamp"></div>
-                    <p class="letter-greeting">Ma chère Aurélia,</p>
-                    <p class="letter-body">
-                        En ce jour si spécial, je voulais prendre un moment pour te dire à quel point tu comptes pour moi.
-                    </p>
-                    <p class="letter-body">
-                        Depuis que tu es entrée dans ma vie, chaque journée est plus belle, chaque rire est plus fort,
-                        et chaque instant passé à tes côtés est un trésor que je garde précieusement dans mon cœur.
-                    </p>
-                    <p class="letter-body">
-                        Tu es la personne la plus incroyable que je connaisse — ta gentillesse, ton sourire, ta force,
-                        ta façon de rendre le monde meilleur simplement en étant toi. Tu illumines ma vie de mille couleurs.
-                    </p>
-                    <p class="letter-body">
-                        Pour ton anniversaire, je te souhaite tout le bonheur du monde, tous les rêves réalisés,
-                        et autant d'amour que tu en donnes chaque jour — c'est-à-dire énormément.
-                    </p>
-                    <p class="letter-body">
-                        Je t'aime plus que les mots ne pourront jamais l'exprimer.
-                    </p>
-                    <p class="letter-closing">
-                        Avec tout mon amour,<br>
-                        <span class="letter-signature">Ton amoureux</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ SECTION 6: FOOTER ============ -->
-    <footer class="footer">
-        <div class="footer-hearts" id="footerHearts"></div>
-        <div class="container">
-            <p class="footer-message">Tu es la plus belle chose qui me soit arrivée.</p>
-            <p class="footer-message small">Joyeux Anniversaire, mon amour.</p>
-            <div class="footer-heart-icon">&hearts;</div>
-            <p class="footer-credit">Fait avec <span class="heart-beat">&hearts;</span> amour</p>
-        </div>
-    </footer>
-
-    <!-- ============ LIGHTBOX ============ -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
-        <img class="lightbox-img" id="lightboxImg" src="" alt="Photo agrandie">
     </div>
+    <a href="#countdown" class="scroll-indicator" aria-label="Défiler vers le bas">
+        <span class="scroll-arrow"></span>
+    </a>
+</section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+<!-- ============ SECTION 2: COUNTDOWN ============ -->
+<section id="countdown" class="countdown-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Le Compte à Rebours</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Chaque seconde qui passe nous rapproche de ton jour spécial</p>
+        <div class="countdown-wrapper" id="countdownWrapper" data-aos="zoom-in" data-aos-delay="200">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Jours</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Heures</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Secondes</span>
+            </div>
+        </div>
+        <div class="celebration-message" id="celebrationMessage" style="display: none;">
+            <h3>C'est aujourd'hui !</h3>
+            <p>Joyeux Anniversaire ma Femme !</p>
+        </div>
+        <div class="locked-message" id="lockedMessage" style="display: none;">
+            <div class="locked-icon">&#x1F512;</div>
+            <p>Patience, mon Loupaillete... La suite se dévoilera le jour J !</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 3: TIMELINE ============ -->
+<section id="timeline" class="timeline-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Notre Histoire</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Les moments qui ont construit notre belle histoire</p>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-entry" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">22 Avril 2011</span>
+                    <h3 class="timeline-title">T.N.I</h3>
+                    <p class="timeline-text">Ce jour-là, la Loupaillette rencontre le Loupaillon</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry timeline-right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">2013</span>
+                    <h3 class="timeline-title">Un Bac S largement mérité </h3>
+                    <p class="timeline-text">Que dire ? Une aisance, un plaisir quotidien de découvrir les Science avec un grand S</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Novembre 2018</span>
+                    <h3 class="timeline-title">Aventure Haut-Savoyarde</h3>
+                    <p class="timeline-text">Une découverte de la vie en montagne, de nombreux weekends au ski, mais surtout... Une vie
+                        ensemble, qu'ensemble :heart:</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry timeline-right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Mai 2021</span>
+                    <h3 class="timeline-title">Capitalisation</h3>
+                    <p class="timeline-text">On se rend bien compte que finalement, on ne peut pas vivre que d'amour et d'eau fraîche...</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">10 Juillet 2021</span>
+                    <h3 class="timeline-title">Notre Mariage</h3>
+                    <p class="timeline-text">Même si cette date ne vaut rien pour toi... Hihi :heart:</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry timeline-right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">17 Septembre 2023</span>
+                    <h3 class="timeline-title">Côme</h3>
+                    <p class="timeline-text">Notre Petit Babou arrive au monde après 9 mois passés, au chaud, avec sa Maman qui l'aime plus
+                        que tout/qu'il aime plus que tout (hihi)</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Juillet 2024</span>
+                    <h3 class="timeline-title">Auto-entreprise Bon</h3>
+                    <p class="timeline-text">Lancement de BonPhoto ! Ma Femme, cette machine, ne se suffit pas des enfants de bas-âge, elle
+                        veut les prendre en photo, encore plus petits!</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry timeline-right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">31 décembre 2025</span>
+                    <h3 class="timeline-title">Le Marichon a craqué</h3>
+                    <p class="timeline-text">On ne s'arrête plus, nous souhaitons redevenir des paysans (cf Papa) ! L'aventure Maison
+                        commence
+                        !</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">13 Mars 2026</span>
+                    <h3 class="timeline-title">C'est aujourd'hui !</h3>
+                    <p class="timeline-text">Joyeux anniversiare ma Femme d'Amour <3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 5: MINI-GAME + LOVE LETTER ============ -->
+<section id="letter" class="letter-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Ma Lettre pour Toi</h2>
+
+        <!-- Heart Catch Game — gates access to the letter -->
+        <div class="game-wrapper" id="gameWrapper" data-aos="fade-up" data-aos-delay="100">
+            <p class="game-intro">Une surprise t'attend... mais il faut d'abord attraper des coeurs !</p>
+            <div class="game-area" id="gameArea">
+                <div class="game-score">
+                    <span id="gameScore">0</span> / <span id="gameTarget">10</span>
+                </div>
+                <div class="game-progress-bar">
+                    <div class="game-progress-fill" id="gameProgressFill"></div>
+                </div>
+                <div class="game-field" id="gameField"></div>
+                <button class="game-start-btn" id="gameStartBtn">Jouer</button>
+            </div>
+        </div>
+
+        <!-- Letter revealed after game is won -->
+        <div class="letter-wrapper" id="letterWrapper" style="display: none;">
+            <div class="letter">
+                <div class="letter-stamp"></div>
+                <p class="letter-greeting">Ma Petite Femme,</p>
+                <p class="letter-body">
+                    Vu le "mode" du moment, je me suis dit qu'un site était la moindre des choses pour te dire à quel point je t'aime et à
+                    quel point tes 31 ans seront une belle année <3 En tout cas, bravo d'avoir réussi mon petit jeu, tu as réussi à en
+                    collecter 10, qui venaient évidemment de mon petit coeur qui t'aime :D
+                </p>
+                <p class="letter-body">
+                    J'ai cette chance folle de pouvoir passer tous les jours de ma vie avec ma Meilleure Amie et en plus, ma Petite Femme.
+                </p>
+                <p class="letter-body">
+                    J'ai aussi l'occasion de te voir devenir cette Femme intelligente et curieuse, toujours à l'écoute, d'une gentillesse et
+                    d'une attention sans fin. Ta recherche permanente de nouveauté et d'idée est une qualité que peu de personnes ont. Crois
+                    en toi, ta force et ta simplicité. Tes amis, ta famille et spécialement ton fils, ont une chance inouïe de t'avoir à
+                    leurs côtés.
+                </p>
+                <p class="letter-body">
+                    Alors en plus de te souhaite une belle journée d'anniversaire, je tiens très sincèrement à te remercier d'être ma
+                    "copine" de vie, car tu me permets d'évoluer sereinement en ta sachant toujours là pour moi. J'ai cette confiance
+                    aveugle en la personne que tu es (même si des fois, tu pourrais croire qu'on ne t'écoute pas assez...). Alors merci ma
+                    Femme <3
+                </p>
+                <p class="letter-body">
+                    Could you
+                </p>
+                <p class="letter-closing">
+                    Je t'aime pour toujours et par dessus tout,<br>
+                    <span class="letter-signature">Ton Ninin <3</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 6: FOOTER ============ -->
+<footer class="footer">
+    <div class="footer-hearts" id="footerHearts"></div>
+    <div class="container">
+        <p class="footer-message">Tu es la plus belle chose qui me soit arrivée</p>
+        <p class="footer-message small">Joyeux Anniversaire, ma Loupaillette !</p>
+        <div class="footer-heart-icon">&hearts;</div>
+        <p class="footer-credit">Fait avec <span class="heart-beat">&hearts;</span> amour</p>
+    </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Photo agrandie">
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
